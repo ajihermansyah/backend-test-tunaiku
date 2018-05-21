@@ -15,9 +15,11 @@ URL: <input type="text" name="url">
 const helloTunaiKu = "<html><body><h1><center>Hello <font color=green>Tunai</font><font color=blue>ku!</font></center></h1></body></html>"
 
 func main() {
+	fmt.Println("Run http://localhost:8080 on browser")
 	http.HandleFunc("/add", Add)
 	http.HandleFunc("/", Handler)
 	http.ListenAndServe(":8080", nil)
+
 }
 
 func Add(w http.ResponseWriter, r *http.Request) {
